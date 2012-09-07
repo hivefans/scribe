@@ -174,7 +174,7 @@ void HdfsFile::listImpl(const std::string& path,
       throw std::runtime_error("hdfsListDirectory call failed");
     }
   } else if (value == -1) {
-    throw std::runtime_error("hdfsExists call failed");
+    return;
   }
 }
 
